@@ -3,7 +3,7 @@ using namespace std;
 class constructor{
     
     public:
-    constructor(){
+    constructor(){ // constructor
         
         cout<<"hello Dhiraj";
     }
@@ -11,5 +11,5 @@ class constructor{
 
 main(){
     
-    constructor c;
+    constructor c; // calling constructor
 }
