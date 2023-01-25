@@ -17,6 +17,6 @@ class sample{
 
 int main(){
     
-    sample s;
+    sample s;// constructor object
     s.message();
 }
