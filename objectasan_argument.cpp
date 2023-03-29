@@ -5,7 +5,7 @@ using namespace std;
 class sample {
 
     int x=10;
-
+public:
     void display(sample s1){
 
         cout<<"value of x accsed by passing object is"<<s.x
