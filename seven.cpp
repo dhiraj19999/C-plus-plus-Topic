@@ -1,4 +1,5 @@
-#include<iostream>  
+//
+   #include<iostream>  
 using namespace std; 
 class student{
 
@@ -7,7 +8,8 @@ class student{
 
    
     public:
-     student(){ // its a constructor
+     student(){ // its a constructor   // deafult constructor becuse it has no argument if we pass an 
+                //   argument then its a argument constructor
 
     cout<<"enter value of x :";
     cin>>x;
@@ -62,3 +64,7 @@ s1.defaultfun(x) // here we pass only one argument   // its called by value meth
 s1.refrnce(&x,&y) // its called by refrence method here address of x will be pass
 
 };
+
+//  when we don't pass to value to constructr then its aan default constructor and if we pass then 
+// its a argument constructor
+
