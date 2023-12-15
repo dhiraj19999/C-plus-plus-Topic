@@ -1,22 +1,42 @@
 //
-   #include<iostream>  
+#include<iostream>  
 using namespace std; 
 class student{
 
     private:
    int x,y;
-
+  int j,m;
    
     public:
-     student(){ // its a constructor   // deafult constructor becuse it has no argument if we pass an 
-                //   argument then its a argument constructor
-
+     student(int t1,int t2){ // its a constructor   // its a argument constructor becuse it has  argument 
+                            //if we don't pass argument then its deafult constructor   
+                
     cout<<"enter value of x :";
     cin>>x;
      cout<<"enter value of y :";
     cin>>y;
+      
+     j=t1;
+     m=t2;
+     return t1 + t2
+
 
    };
+
+   student(student &temp){   // copy constructor
+
+ // in temp has two values, student is data type for temp , &temp for temp take address pf s3
+       
+       j=temp.j;
+       m=temp.m;
+
+
+
+   }
+
+
+
+
     void putdata(){
        
       
@@ -53,9 +73,13 @@ class student{
 
 int main(){
 
-student s1;
-// when s1 is created student constructed calls automatically
+student s1; // when s1 is created student constructed calls automatically
 // if want to pass the argument in student constructor (34,60) e can pass likee that
+ 
+ student s2(100,200) , s3(400,500) , 
+
+ s4(s3)  //  here copying object to other object // here we pass the object s3
+ 
 int x=10
 int y=20
 s1.putdata();
@@ -67,4 +91,3 @@ s1.refrnce(&x,&y) // its called by refrence method here address of x will be pas
 
 //  when we don't pass to value to constructr then its aan default constructor and if we pass then 
 // its a argument constructor
-
