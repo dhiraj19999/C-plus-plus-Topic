@@ -28,9 +28,17 @@ class student{
                                      // parameter have  0 value
 
 
+   };
+
+   void refrnce(int *k , int *m){ /// here argument should be pointer varibles to take store address
+
+  // *c means value of the c 
+  // c means address of c 
+  cout<<"the address of x {stored in k} :" << k <<endl;
+   cout<<"the address of y {stored in m}  :" << m <<endl;
+
+    return *k + *m
    }
-
-
 
     ~student(){  // destructor will runs at the end of the program once job get done once memory get relesed
                // if you want to excute somthing at the end of the every object then we have to use destructor
@@ -46,7 +54,11 @@ int main(){
 student s1;
 // when s1 is created student constructed calls automatically
 // if want to pass the argument in student constructor (34,60) e can pass likee that
-
+int x=10
+int y=20
 s1.putdata();
-s1.defaultfun(78) // here we pass only one argument
+s1.defaultfun(x) // here we pass only one argument   // its called by value method
+
+s1.refrnce(&x,&y) // its called by refrence method here address of x will be pass
+
 };
