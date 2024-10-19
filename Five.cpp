@@ -225,7 +225,7 @@ student()
 static int count = 0 ; // here count act as a global varible becuz of static keyword, whatever times funvtion get called but  count varible dosen't get redeclared again and again
 count = count + 1 ; 
 } 
-static int getCount();
+static int getCount(); // static function used to handle static varible, only static fun can access and return the static varible
 {
 return count; 
 }
@@ -234,5 +234,5 @@ return count;
 int main()
 {
 student s1, s2, s3, s4, s5 ; 
-cout << "No of times constructor called " << student::getCount() << endl ; 
+cout << "No of times constructor called " << student::getCount() << endl ; // we use static fun to get access of static varibles in main function becuz other function can;t get access of static varible in main fun
 }
