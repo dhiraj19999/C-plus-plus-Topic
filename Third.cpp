@@ -93,3 +93,43 @@ return 0;
 
 x[0] ==> Devendran
 x[1] ==> Arun
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std ; 
+
+//COMMAND LINE ARGUMENTS
+
+int main(int argc, char** argv)
+{
+cout << "No of arguments = " << argc << endl ;
+cout << "Values of parameters are \n";
+for (int i = 0; i < argc ; i++)
+{
+cout << argv[i] << endl ; 
+}
+return 0;
+}
+
+
+// char x ;  x='a'; x='b';
+
+// char x[70] ;
+// char* x ; x='Devendran' 
+
+// char x[50][50] ; 
+
+// char** x ; x = "Devendran", 
+  "Arun",
+  "Balasubramani"
+  ...
+  ...
+
+x[0] ==> Devendran
+x[1] ==> Arun
