@@ -1,4 +1,4 @@
-Single inheritance is defined as the inheritance in which a derived class is inherited from the only one base class.
+2Single inheritance is defined as the inheritance in which a derived class is inherited from the only one base class.
 
 #include <iostream>  
 using namespace std;  
@@ -90,3 +90,93 @@ int main()
     D object; 
     object.show(); 
 } 
+
+
+C++ Multilevel Inheritance
+Multilevel inheritance is a type of inheritance in C++ where a derived class inherits properties and methods from a base class, and the base class itself is derived from another base class. This creates a hierarchy of inheritance with multiple levels
+
+
+#include <iostream>
+
+class Animal {
+    public:
+        void sound() { cout << " generic animal sound" << endl; }
+};
+
+class Mammal : public Animal {
+    public:
+        void eat() { cout << "eating" << endl; }
+};
+
+class Dog : public Mammal {
+    public:
+        void bark() { cout << "woof!" << endl; }
+};
+
+int main() {
+    Dog myDog;
+    myDog.sound(); // outputs "generic animal sound"
+    myDog.eat();   // outputs "eating"
+    myDog.bark();  // outputs "woof!"
+    return 0;
+}
+
+
+
+In this example:
+
+Animal is the base class.
+Mammal is derived from Animal and adds the eat() method.
+Dog is derived from Mammal and adds the bark() method.
+Key Points
+A derived class can inherit from multiple base classes using multilevel inheritance.
+Each level of inheritance creates a new scope, allowing derived classes to override or add new members and methods.
+The most derived class (e.g., Dog) has access to all members and methods of its base classes (e.g., Mammal and Animal).
+
+Advantages
+Code reuse: Multilevel inheritance allows you to reuse code from base classes, reducing code duplication.
+Flexibility: It enables you to create complex hierarchies of inheritance, modeling real-world relationships between classes.
+Polymorphism: Multilevel inheritance enables polymorphic behavior, where objects of different classes can be treated as if they were of the same class.
+
+
+
+
+C++ Multiple Inheritance
+In C++, multiple inheritance allows a class to inherit properties and behavior from more than one base class. This is achieved by listing multiple base classes in the inheritance declaration, separated by commas.
+
+
+class Animal {
+    public:
+        void sound() {
+            cout << " generic animal sound" << endl;
+        }
+};
+
+class Mammal {
+    public:
+        void eat() {
+            cout << "mammal eats" << endl;
+        }
+};
+
+class WingedAnimal {
+    public:
+        void fly() {
+            cout << "winged animal flies" << endl;
+        }
+};
+
+class Bat : public Animal, public Mammal, public WingedAnimal {
+    // ...
+};
+
+In this example, the Bat class inherits from three base classes: Animal, Mammal, and WingedAnimal. This allows Bat to inherit the sound(), eat(), and fly() functions from its respective base classes.
+
+Challenges
+Diamond Problem: When two base classes have a common base class, it can lead to ambiguity and duplicate member variables. Virtual inheritance can help resolve this issue.
+Order of Constructor Calls: The constructors of inherited classes are called in the order they are listed in the inheritance declaration.
+Order of Destructor Calls: The destructors of inherited classes are called in the reverse order of constructor calls.
+Best Practices
+Use virtual inheritance to avoid the diamond problem.
+Minimize the number of base classes to reduce complexity.
+Use interfaces (abstract classes) instead of concrete classes to define a contract, making multiple inheritance more manageable.
