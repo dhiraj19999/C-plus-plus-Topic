@@ -140,6 +140,55 @@ Polymorphism: Multilevel inheritance enables polymorphic behavior, where objects
 
 
 
+#include <iostream>
+using namespace std ;
+
+// MULTI-LEVEL INHERITANCE
+
+class A
+{
+public:
+void showA() { cout << "This is class A  \n"; }
+};
+
+class B : public A
+{
+public:
+void showB() { cout << "This is class B \n"; }
+};
+class C : private B    //  here class B inherited privately 
+{
+public:
+void showC() 
+{ 
+cout << "This is class C \n"; 
+cout << "Calling ShowA and ShowB from ShowC \n";
+showA();   //  Here we access showA and showB privately 
+showB();
+}
+};
+
+class D : public C
+{
+public:
+void showD() 
+{
+cout << "This is class D \n"; 
+}
+};
+
+int main()
+{
+D objd ; 
+//objd.showA(); class B inherited privately so can't access showA and showB directly 
+//objd.showB();
+objd.showC();
+objd.showD();
+
+return 0;
+}
+
+
 
 C++ Multiple Inheritance
 In C++, multiple inheritance allows a class to inherit properties and behavior from more than one base class. This is achieved by listing multiple base classes in the inheritance declaration, separated by commas.
