@@ -229,3 +229,51 @@ Best Practices
 Use virtual inheritance to avoid the diamond problem.
 Minimize the number of base classes to reduce complexity.
 Use interfaces (abstract classes) instead of concrete classes to define a contract, making multiple inheritance more manageable.
+
+
+
+
+
+
+#include <iostream>
+using namespace std ;
+
+// MULTI-LEVEL INHERITANCE
+
+class A
+{
+public:
+void showA() { cout << "This is class A  \n"; }
+};
+
+class B : public A
+{
+public:
+void showB() { cout << "This is class B \n"; }
+};
+class C : public B 
+{
+public:
+void showC() { cout << "This is class C \n"; }
+};
+
+class D : public C
+{
+public:
+void showD() { cout << "This is class D \n"; }
+};
+
+int main()
+{
+//Base Class Pointer to the Derived Class Object.
+
+A *ptr ;  D objd ; 
+ptr = &objd ; // here we store address of D in ptr
+
+ptr->showA();
+ptr->showB();
+ptr->showC();
+ptr->showD();
+
+return 0;
+}
