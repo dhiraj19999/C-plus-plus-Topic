@@ -1,4 +1,4 @@
-#include <iostream>
+7#include <iostream>
 #include <fstream>
 using namespace std ;
 
@@ -113,6 +113,39 @@ DisplayNames(ARR1);
 cout << "Program is Completed \n";
 }
 
+
+
+#include <iostream>
+using namespace std ;
+
+int main()
+{
+int ARR1[3][3] ;
+
+cout << "Enter the values row by row" << endl ;
+for (int i=0; i<3 ; i++)
+{
+for (int j = 0; j<3 ; j++ )
+{
+cin >> ARR1[i][j] ;
+}
+}
+cout << "Your values are " << endl ;
+for (int i=0; i<3 ; i++)
+{
+for (int j = 0; j<3 ; j++ )
+{
+cout << ARR1[i][j] << "," ;
+}
+cout << endl ; 
+
+}
+
+//  Output will be 1  2   3   
+                   4  5   6
+cout << "Program is Completed \n";
+// it's a example of adding rows and column in two dimensional array
+}
 
 
 
