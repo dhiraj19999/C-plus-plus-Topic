@@ -198,3 +198,49 @@ cout << "result = " << result << endl ;
 
 cout << "Program is Completed \n";
 }
+
+
+
+
+
+#include <iostream>
+using namespace std ;
+
+// TEMPLATES (Function Template)
+// TEMPLATES (Class Template)
+
+// GENETIC PROGRAMMING
+template <typename T1, typename T2>
+class Student
+{
+T1 x ;
+T2 y ;
+public:
+void getdata() 
+{cout << "Enter two data" ;
+    cin >> x ; 
+    cin >> y ;
+}
+void putdata() 
+{
+cout << "Your two data are \n" ;
+cout << x  << ", " <<  y << endl  ;
+}
+};
+
+int main()
+{
+Student <int, int> obj1 ; 
+obj1.getdata();
+
+Student <float, float> obj2 ;
+obj2.getdata();
+
+cout << "Object 1 (int, int) \n";
+obj1.putdata();
+
+cout << "Object 2 (float, float) \n";
+obj2.putdata();
+
+cout << "Program is Completed \n";
+}
