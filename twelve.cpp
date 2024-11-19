@@ -149,3 +149,26 @@ cout << "Program is Completed \n";
 
 
 
+
+
+
+#include <iostream>
+using namespace std ;
+
+// TEMPLATES
+// GENETIC PROGRAMMING
+
+template <typename T1, typename T2>
+void sumofnumbers(T1 x, T2 y)
+{
+cout << "Sum = " << x + y << endl ;
+}
+
+int main()
+{
+float t1 = 45.678, t2 = 20.123 ;
+
+sumofnumbers<float, float> (t1, t2);
+
+cout << "Program is Completed \n";
+}
