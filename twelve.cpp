@@ -85,3 +85,34 @@ cout << ARR1[1][0] << endl ; // R get printed from Raja
 
 cout << "Program is Completed \n";
 }
+
+
+
+
+
+#include <iostream>
+#include <fstream>
+using namespace std ;
+
+void DisplayNames(char ARR2[][25])
+{
+cout << "DisplayNames inside the function\n";
+for(int i=0; i<4;i++)
+{
+cout << ARR2[i] << endl ; 
+}
+}
+
+int main()
+{
+char ARR1[][25] = {"Devendran", "Raja rajan", "Kumar", "Sharif"} ;
+
+cout <<"Passing 2D array as arguments \n";
+DisplayNames(ARR1); 
+
+cout << "Program is Completed \n";
+}
+
+
+
+
