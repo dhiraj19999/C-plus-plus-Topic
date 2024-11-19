@@ -64,3 +64,24 @@ bubblesort(ARR1);
 
 cout << "Program is Completed \n";
 }
+
+
+
+
+#include <iostream>
+#include <fstream>
+using namespace std ;
+
+int main()
+{
+char ARR1[4][10] = {"Devendran", "Raja", "Kumar", "Sharif"} ; 
+
+
+cout << ARR1[2] << endl ; 
+
+
+cout << ARR1[1][0] << endl ; 
+
+
+cout << "Program is Completed \n";
+}
