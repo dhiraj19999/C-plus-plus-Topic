@@ -80,7 +80,7 @@ char ARR1[4][10] = {"Devendran", "Raja", "Kumar", "Sharif"} ;
 cout << ARR1[2] << endl ; 
 
 
-cout << ARR1[1][0] << endl ; 
+cout << ARR1[1][0] << endl ; // R get printed from Raja
 
 
 cout << "Program is Completed \n";
