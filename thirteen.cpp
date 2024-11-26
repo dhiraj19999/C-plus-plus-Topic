@@ -201,3 +201,26 @@ cout << "The value of b should not be zero, Thanks" << endl ;
 
 cout << "Program is Completed \n";
 }
+
+
+
+
+#include <iostream>
+#include <exception>
+
+using namespace std ;
+
+int main() // Standard Exceptions
+{
+try
+{
+int* myarray= new int[10000000000];
+}
+catch (exception& e)
+{
+cout << "Standard exception: " << e.what() << endl;
+}
+
+cout << "Program is Completed \n";
+return 0;
+}
