@@ -163,3 +163,41 @@ cout << "Base class Exceptions" << endl ;
 }
 cout << "Program is Completed \n";
 }
+
+
+
+
+
+#include <iostream>
+using namespace std ;
+
+
+int main()    // Re-throwing of exceptions
+{
+int a, b ; 
+try
+{
+cout << "Enter value of a and b" << endl ;
+cin >> a ; 
+cin >> b ;
+try
+{
+if ( b == 0 )
+throw (b);
+else
+{
+cout << "Division result = " << a / b << endl ;
+}
+}
+catch(...)
+{
+throw ; 
+}
+}
+catch(int)
+{
+cout << "The value of b should not be zero, Thanks" << endl ;
+}
+
+cout << "Program is Completed \n";
+}
