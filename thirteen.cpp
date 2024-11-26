@@ -103,3 +103,31 @@ cout << "Kindly try again,, sorry for inconvenience\n";
 
 cout << "Program is Completed \n";
 }
+
+
+
+#include <iostream>
+using namespace std ;
+
+void Myfunction_terminate()
+{
+cout << "Sorry for inconvenience, Try again" << endl ;
+exit(-1);
+}
+
+int main()    // Division By Zero
+{
+
+char x ; 
+try
+{
+set_terminate(Myfunction_terminate);
+throw (x) ;
+}
+catch(char)
+{
+cout << "My own int catch block" << endl ;
+}
+
+cout << "Program is Completed \n";
+}
