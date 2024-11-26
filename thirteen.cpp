@@ -131,3 +131,35 @@ cout << "My own int catch block" << endl ;
 
 cout << "Program is Completed \n";
 }
+
+
+
+
+#include <iostream>
+using namespace std ;
+
+class First
+{
+};
+class Second : public First
+{
+};
+
+int main()    // Division By Zero
+{
+First obj1 ;  
+
+try
+{
+throw (obj1) ; 
+}
+catch(Second s1)
+{
+cout << "Derived class Exceptions" << endl ; 
+}
+catch(First f1)
+{
+cout << "Base class Exceptions" << endl ; 
+}
+cout << "Program is Completed \n";
+}
