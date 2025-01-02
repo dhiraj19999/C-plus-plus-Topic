@@ -26,11 +26,6 @@ cout << "No of times constructor called " << student::count << endl ;  // No of 
 
 
 
-#include <iostream>
-using namespace std ; 
-
-}
-
 
 
 
@@ -84,48 +79,6 @@ obj2.functionA2();
 //protected inheritance makes the public and protected members of the base class protected in the derived class.
 //private inheritance makes the public and protected members of the base class private in the derived class.
 
-
-#include <iostream>
-using namespace std ; 
-
-// Simple Inheritance 
-
-class A
-{
-public:
-void functionA1()
-{
-cout << "This is functionA1" << endl ; 
-}
-void functionA2()
-{
-cout << "This is functionA2" << endl ; 
-}
-};
-
-class B  : private A
-{
-
-public:
-void functionB1()
-{
-cout << "This is private functions " << endl ; 
-functionA1();
-functionA2();
-cout << "This is functionB1" << endl ; 
-}
-void functionB2()
-{
-cout << "This is functionB2" << endl ; 
-}
-};
-
-int main()
-{
-B obj2 ; 
-obj2.functionB1();
-obj2.functionB2();
-}
 
 
 #include <iostream>
