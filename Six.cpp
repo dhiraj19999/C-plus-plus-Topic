@@ -29,28 +29,6 @@ cout << "No of times constructor called " << student::count << endl ;  // No of 
 #include <iostream>
 using namespace std ; 
 
-// storage clause  ;; AUTO STATIC EXTERN REGISTER 
-
-class student
-{
-public :
-static int count ; 
-student()
-{
-count = count + 1 ; 
-} 
-static int getCount()
-{
-return count ; 
-}
-};
-
-int student :: count = 0 ; 
-
-int main()
-{
-student s1, s2, s3, s4, s5, s6, s7, s8 ; 
-cout << "No of objects created = " << student::getCount() << endl ; //No of times constructor called 8
 }
 
 
