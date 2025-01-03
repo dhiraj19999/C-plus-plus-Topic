@@ -1,4 +1,4 @@
-2Single inheritance is defined as the inheritance in which a derived class is inherited from the only one base class.
+//Single inheritance is defined as the inheritance in which a derived class is inherited from the only one base class.
 
 #include <iostream>  
 using namespace std;  
@@ -19,9 +19,9 @@ int main(void) {
 
 
 
-Virtual base classes are used in virtual inheritance in a way of preventing multiple “instances” of a given class appearing in an inheritance hierarchy when using multiple inheritances. 
+//Virtual base classes are used in virtual inheritance in a way of preventing multiple “instances” of a given class appearing in an inheritance hierarchy when using multiple inheritances. 
 
-Need for Virtual Base Classes: Consider the situation where we have one class A . This class A is inherited by two other classes B and C. Both these class are inherited into another in a new class D 
+//Need for Virtual Base Classes: Consider the situation where we have one class A . This class A is inherited by two other classes B and C. Both these class are inherited into another in a new class D 
 
 #include <iostream> 
 using namespace std; 
