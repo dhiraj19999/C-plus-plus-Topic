@@ -1,30 +1,3 @@
-#include <iostream>
-#include <fstream>  // Header
-
-using namespace std ;
-
-int main()
-{
-string x1 ; 
-ofstream f1 ;   // f1 is an object of ofstream class whcih is used to create file
-int n ; 
-
-f1.open("StudentNames.txt");  // here we created the file name StudentsNames
-
-cout << "Enter no. of students : " ; 
-cin >> n ; 
-
-for (int i=0; i<= n; i++)
-{
-getline(cin, x1) ; 
-f1 << x1 ;
-f1 << "\n" ; 
-}
-f1.close();   
-
-cout << endl ; 
-return 0;
-}
 
 
 #include <iostream>
